@@ -108,8 +108,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(
-            create: (_) => JobProvider()..fetchJobs()), // Add this line
+        ChangeNotifierProvider(create: (_) => JobProvider()..fetchJobs()), // Add this line
         ChangeNotifierProvider(create: (_) => JobRequirementRepository()),
       ],
       child: GetBuilder<ThemeController>(builder: (themeController) {
@@ -152,9 +151,7 @@ class _MyAppState extends State<MyApp> {
                         GetBuilder<SplashController>(
                             builder: (splashController) {
                           if (!splashController.savedCookiesData ||
-                              !splashController.getAcceptCookiesStatus(
-                                  splashController.configModel!.cookiesText ??
-                                      "")) {
+                              !splashController.getAcceptCookiesStatus(splashController.configModel!.cookiesText ?? "")) {
                             return ResponsiveHelper.isWeb()
                                 ? const Align(
                                     alignment: Alignment.bottomCenter,
