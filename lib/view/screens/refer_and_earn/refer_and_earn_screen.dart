@@ -18,7 +18,7 @@ import 'package:getondial/view/base/footer_view.dart';
 import 'package:getondial/view/base/menu_drawer.dart';
 import 'package:getondial/view/base/not_logged_in_screen.dart';
 import 'package:getondial/view/screens/refer_and_earn/widget/bottom_sheet_view.dart';
-import 'package:flutter_share_me/flutter_share_me.dart';
+
 
 enum ShareType {
   facebook,
@@ -181,7 +181,7 @@ class _ReferAndEarnScreenState extends State<ReferAndEarnScreen> {
   }
 
 
-  Future<void> onButtonTap(ShareType share, String msg) async {
+  /*Future<void> onButtonTap(ShareType share, String msg) async {
     String url = 'https://pub.dev/packages/flutter_share_me';
 
     String? response;
@@ -202,5 +202,5 @@ class _ReferAndEarnScreenState extends State<ReferAndEarnScreen> {
 
     }
     debugPrint(response);
-  }
+  }*/
 }

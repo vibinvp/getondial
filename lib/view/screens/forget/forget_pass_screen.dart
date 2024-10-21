@@ -17,7 +17,7 @@ import 'package:getondial/view/base/footer_view.dart';
 import 'package:getondial/view/base/menu_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:phone_number/phone_number.dart';
+//import 'package:phone_number/phone_number.dart';
 
 class ForgetPassScreen extends StatefulWidget {
   final bool fromSocialLogin;
@@ -104,13 +104,13 @@ class _ForgetPassScreenState extends State<ForgetPassScreen> {
 
     String numberWithCountryCode = countryCode+phone;
     bool isValid = GetPlatform.isAndroid ? false : true;
-    if(GetPlatform.isAndroid) {
+  /*  if(GetPlatform.isAndroid) {
       try {
         PhoneNumber phoneNumber = await PhoneNumberUtil().parse(numberWithCountryCode);
         numberWithCountryCode = '+${phoneNumber.countryCode}${phoneNumber.nationalNumber}';
         isValid = true;
       } catch (_) {}
-    }
+    }*/
 
     if (phone.isEmpty) {
       showCustomSnackBar('enter_phone_number'.tr);

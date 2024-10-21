@@ -201,6 +201,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.0"
+  expandable_bottom_sheet:
+    dependency: "direct main"
+    description:
+      name: expandable_bottom_sheet
+      sha256: d62455231ccd53bf7a153c87e2cdecd2c8e7d737cb5262a5fc9481c5e3aed7d1
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.1+1"
   facebook_auth_desktop:
     dependency: transitive
     description:
@@ -619,14 +627,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.1.2"
-  flutter_share_me:
-    dependency: "direct main"
-    description:
-      name: flutter_share_me
-      sha256: "2cd97783bcd7c61eaee20b11c2952bb57a94608f25c3504ff3c08803134609c2"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.4.0"
   flutter_slidable:
     dependency: "direct main"
     description:
@@ -1085,14 +1085,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.1"
-  lint:
-    dependency: transitive
-    description:
-      name: lint
-      sha256: "4a539aa34ec5721a2c7574ae2ca0336738ea4adc2a34887d54b7596310b33c85"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.10.0"
   list_counter:
     dependency: transitive
     description:
@@ -1133,14 +1125,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.6"
-  modal_bottom_sheet:
-    dependency: "direct overridden"
-    description:
-      name: modal_bottom_sheet
-      sha256: eac66ef8cb0461bf069a38c5eb0fa728cee525a531a8304bd3f7b2185407c67e
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.0.0"
   nested:
     dependency: transitive
     description:
