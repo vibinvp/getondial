@@ -5,7 +5,7 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:phone_number/phone_number.dart';
+
 import 'package:getondial/controller/auth_controller.dart';
 import 'package:getondial/controller/localization_controller.dart';
 import 'package:getondial/controller/splash_controller.dart';
@@ -22,6 +22,7 @@ import 'package:getondial/view/base/footer_view.dart';
 import 'package:getondial/view/base/menu_drawer.dart';
 import 'package:getondial/view/screens/auth/widget/condition_check_box.dart';
 import 'package:getondial/view/screens/auth/widget/pass_view.dart';
+import 'package:phone_numbers_parser/phone_numbers_parser.dart';
 
 class DeliveryManRegistrationScreen extends StatefulWidget {
   const DeliveryManRegistrationScreen({Key? key}) : super(key: key);
@@ -976,8 +977,8 @@ class _DeliveryManRegistrationScreenState extends State<DeliveryManRegistrationS
               bool isValid = GetPlatform.isAndroid ? false : true;
               if(GetPlatform.isAndroid) {
                 try {
-                  PhoneNumber phoneNumber = await PhoneNumberUtil().parse(numberWithCountryCode);
-                  numberWithCountryCode = '+${phoneNumber.countryCode}${phoneNumber.nationalNumber}';
+                  PhoneNumber phoneNumber = await PhoneNumber.parse(numberWithCountryCode);
+                  // numberWithCountryCode = '+${phoneNumber.countryCode}${phoneNumber.numberWithCountryCode}';
                   isValid = true;
                 } catch (_) {}
               }
@@ -1024,13 +1025,13 @@ class _DeliveryManRegistrationScreenState extends State<DeliveryManRegistrationS
 
     if(ResponsiveHelper.isDesktop(context)){
       bool isValid = GetPlatform.isAndroid ? false : true;
-      if(GetPlatform.isAndroid) {
+    /*  if(GetPlatform.isAndroid) {
         try {
           PhoneNumber phoneNumber = await PhoneNumberUtil().parse(numberWithCountryCode);
           numberWithCountryCode = '+${phoneNumber.countryCode}${phoneNumber.nationalNumber}';
           isValid = true;
         } catch (_) {}
-      }
+      }*/
 
       if(fName.isEmpty) {
         showCustomSnackBar('enter_delivery_man_first_name'.tr);

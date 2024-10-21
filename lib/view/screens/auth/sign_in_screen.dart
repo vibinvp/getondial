@@ -298,7 +298,7 @@ class SignInScreenState extends State<SignInScreen> {
     String password = _passwordController.text.trim();
     String numberWithCountryCode = countryDialCode + phone;
     bool isValid = GetPlatform.isAndroid ? false : true;
-    if (GetPlatform.isAndroid) {
+    /*if (GetPlatform.isAndroid) {
       try {
         PhoneNumber phoneNumber =
             await PhoneParser.parse(numberWithCountryCode);
@@ -306,7 +306,7 @@ class SignInScreenState extends State<SignInScreen> {
             '+${phoneNumber.countryCode}${phoneNumber.nationalNumber}';
         isValid = true;
       } catch (_) {}
-    }
+    }*/
     if (phone.isEmpty) {
       showCustomSnackBar('enter_phone_number'.tr);
     } else if (!isValid) {

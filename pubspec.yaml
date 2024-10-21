@@ -81,13 +81,10 @@ dependencies:
   provider: ^6.0.0
   flutter_keyboard_visibility: ^6.0.0
   phone_numbers_parser: ^9.0.1
- 
-  
+  expandable_bottom_sheet: 1.1.1+1
+
 #  sliver_app_bar_builder: ^1.0.4
 #  customizable_space_bar: ^0.2.0
-
-dependency_overrides:
-  modal_bottom_sheet: ^3.0.0-pre
 
 dev_dependencies:
   flutter_test:

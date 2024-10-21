@@ -21,7 +21,7 @@ import 'package:getondial/view/screens/auth/sign_in_screen.dart';
 import 'package:getondial/view/screens/auth/widget/condition_check_box.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:phone_number/phone_number.dart';
+//import 'package:phone_number/phone_number.dart';
 import 'package:getondial/view/screens/auth/widget/pass_view.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -403,7 +403,7 @@ class SignUpScreenState extends State<SignUpScreen> {
 
     String numberWithCountryCode = countryCode + number;
     bool isValid = GetPlatform.isAndroid ? false : true;
-    if (GetPlatform.isAndroid) {
+    /*if (GetPlatform.isAndroid) {
       try {
         PhoneNumber phoneNumber =
             await PhoneNumberUtil().parse(numberWithCountryCode);
@@ -411,7 +411,7 @@ class SignUpScreenState extends State<SignUpScreen> {
             '+${phoneNumber.countryCode}${phoneNumber.nationalNumber}';
         isValid = true;
       } catch (_) {}
-    }
+    }*/
 
     if (firstName.isEmpty) {
       showCustomSnackBar('enter_your_first_name'.tr);
