@@ -115,9 +115,9 @@ class _MyAppState extends State<MyApp> {
         return GetBuilder<LocalizationController>(
             builder: (localizeController) {
           return GetBuilder<SplashController>(builder: (splashController) {
-            return (GetPlatform.isWeb && splashController.configModel == null)
+            return /*(GetPlatform.isWeb && splashController.configModel == null)
                 ? const SizedBox()
-                : GetMaterialApp(
+                :*/ GetMaterialApp(
                     title: AppConstants.appName,
                     debugShowCheckedModeBanner: false,
                     navigatorKey: Get.key,
@@ -150,16 +150,16 @@ class _MyAppState extends State<MyApp> {
                         widget!,
                         GetBuilder<SplashController>(
                             builder: (splashController) {
-                          if (!splashController.savedCookiesData ||
-                              !splashController.getAcceptCookiesStatus(splashController.configModel!.cookiesText ?? "")) {
-                            return ResponsiveHelper.isWeb()
-                                ? const Align(
+                          /*if (!splashController.savedCookiesData ||
+                              !splashController.getAcceptCookiesStatus(splashController.configModel!.cookiesText ?? "")) {*/
+                            return /*ResponsiveHelper.isWeb()
+                                ? */const Align(
                                     alignment: Alignment.bottomCenter,
-                                    child: CookiesView())
-                                : const SizedBox();
-                          } else {
+                                    child: CookiesView());
+                                // : const SizedBox();
+                         /* } else {
                             return const SizedBox();
-                          }
+                          }*/
                         })
                       ]),
                     ),
